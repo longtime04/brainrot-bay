@@ -1,6 +1,6 @@
-// A working roblox-brainrot-01 entry (Node 22, standard library only): the game is this directory's Rojo
-// project, built into game.rbxl with `rojo build default.project.json --output game.rbxl`, and the program
-// hands it in. It copies game.rbxl, src/, screenshots/ and PLAY.json from beside this file to /output and
+// Brainrot Bay: Grab & Dash — a roblox-brainrot-01 entry (Node 22, standard library only): the game is
+// this directory's Rojo project, built into game.rbxl with `rojo build default.project.json --output
+// game.rbxl`, and the program hands it in. It copies game.rbxl, src/, screenshots/ and PLAY.json from beside this file to /output and
 // writes /output/dossier.json, the summary the judge reads, with the vendored make.fun library. A starting
 // point, not a winner: it is a grey square that moves with the arrow keys. Build your game, rebuild
 // game.rbxl, put your PNG or JPEG screenshots in screenshots/ (the first by name is the cover, and one of
@@ -20,6 +20,8 @@ import { buildDossier } from './vendor/makefun-roblox.ts';
 
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+
+console.log('Brainrot Bay: Grab & Dash — handing in the built island (game.rbxl, src/, screenshots/, PLAY.json)');
 
 /** cpSync's filter: leave out every file and directory whose name starts with a dot (.gitkeep, .DS_Store, .git). */
 const notDotted = (path: string): boolean => !basename(path).startsWith('.');
